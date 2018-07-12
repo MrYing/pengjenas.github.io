@@ -130,8 +130,8 @@
 								<article>
 									<header>
 										<span class="date">April 7, 2017</span>
-										<h2><a href="#">第六个<br />
-										小标题</a></h2>
+										<h2><a href="#">Augue lorem<br />
+										primis vestibulum</a></h2>
 									</header>
 									<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
 									<p>浮华的一生，有的人有些事，哭着哭着都忘了，走着走着也就散了，仅留下的，也只是年华过后，故地重游，风兮兮，水易寒，谁人的笙歌婉转，叫我忆起往事，可是，这时谁还会记得谁呢，被想起的那个人是幸福的，而再也记不起的那人谁懂她的泪又沾襟。</p>
@@ -207,6 +207,15 @@
 						</section>
 					</footer>
 
+				<!-- Top -->
+				<style> 
+					.top_box {position: fixed;  right: 50px; bottom: 100px; display:none; }
+					.top_btn {box-shadow: inset 0 0 0 2px #ffffff; color: #ffffff !important;} 					 					
+				</style>
+				<div class="top_box" >					
+        	        <a href="#header" class="top_btn button icon solo fa-arrow-up scrolly">TOP</a>		
+        		</div>
+
 				<!-- Copyright -->
 					<div id="copyright">
 						<ul><li>&copy; 未定义</li><li>设计: <a href="https://html5up.net">HTML5 UP</a></li></ul>
@@ -222,6 +231,20 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+		<!-- Top_Scripts -->
+			<script>
+					$(function(){
+						$(window).scroll(function(){
+							var _top = $(window).scrollTop();
+							if(_top<600){
+								$('.top_box').fadeOut(600);
+							}else{
+								$('.top_box').fadeIn(600);
+							}
+						});												
+					});
+			</script>
 
 	</body>
 </html>

@@ -482,6 +482,15 @@ print 'It took ' + i + ' iterations to sort the deck.';
 						</section>
 					</footer>
 
+				<!-- Top -->
+				<style> 
+					.top_box {position: fixed;  right: 50px; bottom: 100px; display:none; }
+					.top_btn {box-shadow: inset 0 0 0 2px #ffffff; color: #ffffff !important;} 					 					
+				</style>
+				<div class="top_box" >					
+        	        <a href="#header" class="top_btn button icon solo fa-arrow-up scrolly">TOP</a>		
+        		</div>
+
 				<!-- Copyright -->
 					<div id="copyright">
 						<ul><li>&copy; 未定义</li><li>设计: <a href="https://html5up.net">HTML5 UP</a></li></ul>
@@ -497,6 +506,20 @@ print 'It took ' + i + ' iterations to sort the deck.';
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+		<!-- Top_Scripts -->
+			<script>
+					$(function(){
+						$(window).scroll(function(){
+							var _top = $(window).scrollTop();
+							if(_top<400){
+								$('.top_box').fadeOut(600);
+							}else{
+								$('.top_box').fadeIn(600);
+							}
+						});												
+					});
+			</script>
 
 	</body>
 </html>
